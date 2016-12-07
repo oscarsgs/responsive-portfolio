@@ -1,0 +1,31 @@
+{
+  "name": "responsive-portfolio",
+  "version": "1.0.0",
+  "description": "Basic portfolio with a responsive layout",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarsgs/responsive-portfolio.git"
+  },
+  "keywords": [
+    "responsive",
+    "portfolio"
+  ],
+  "author": "Oscar Garcia-Saldarriaga",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarsgs/responsive-portfolio/issues"
+  },
+  "homepage": "https://github.com/oscarsgs/responsive-portfolio#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^1.2.1",
+    "load-grunt-tasks": "^3.5.2"
+  }
+}
