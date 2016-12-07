@@ -3,6 +3,15 @@ module.exports = function(grunt) {
 	var config = grunt.file.readYAML('gruntconfig.yml');
 
 	grunt.initConfig({
+		express: {
+			all: {
+				options: {
+					bases: ['/Users/oscar/Desktop/Projects/responsive-portfolio/src'],
+					port: 8080,
+					livereload: true
+				}
+			}
+		},
 		sass: {
 			dist: {
 				src: config.scssDir + 'style.scss',
@@ -28,9 +37,20 @@ module.exports = function(grunt) {
 			}
 		},
 		watch: {
+			all: {
+				files: '**/*.html',
+				options: {
+					livereload: true
+				}
+			},
 			sass: {
 				files: config.scssDir + 'style.scss',
 				tasks: ["sass"]
+			}
+		},
+		open: {
+			all: {
+				path: 'http://localhost:8080/index.html'
 			}
 		}
 	});
@@ -38,9 +58,13 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [
 		'sass',
 		'jshint',
-		'watch'
 	]);
 	grunt.registerTask('build',[
 		'copy'
+	]);
+	grunt.registerTask('serve',[
+		'express',
+		'open',
+		'watch'
 	]);
 };
